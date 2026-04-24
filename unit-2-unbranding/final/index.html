@@ -1,15 +1,48 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
-	<!--
-	About this page:
+    <!--
+    I debranded mcdonalds and replaced their motto with im leveling it, as mcdonalds
+	beef production levels many forests.
+    -->
 
-	-->
-	<title>Unbranding</title>
-	
+    <title>I'm Leveling It</title>
+
+    <style>
+        /* Source: W3Schools https://www.w3schools.com/css/ */
+        body {
+            background-color: #DA291C;
+            text-align: center;
+        }
+
+        img {
+            width: 800px;
+        }
+    </style>
+
 </head>
 <body>
-	<h1>Hello, world!</h1>
+
+    <!-- Source: W3Schools https://www.w3schools.com/html/html_images.asp -->
+    <img id="brandImage"
+         src="Wireframe_-_1.png"
+         alt="McDonald's parody logo with red background and golden M">
+
+    <script>
+        /* Source: Critical Web Design Wiki 3.3
+           https://criticalwebdesign.github.io/wiki/chapter-03/3-3-javascript-events/ */
+
+        let brandImage = document.querySelector("#brandImage");
+
+        brandImage.addEventListener("mouseover", function() {
+            brandImage.src = "Wireframe_-_2.png";
+        });
+
+        brandImage.addEventListener("mouseout", function() {
+            brandImage.src = "Wireframe_-_1.png";
+        });
+    </script>
+
 </body>
 </html>
