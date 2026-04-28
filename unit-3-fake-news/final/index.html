@@ -11,9 +11,15 @@
 	My Process:
     - Bootstrap 5 grid system: https://getbootstrap.com/docs/5.3/layout/grid/
     - Bootstrap 5 getting started: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - Bootstrap 5 spacing utilities: https://getbootstrap.com/docs/5.3/utilities/spacing/
     - CSS styling: https://www.w3schools.com/css/
-    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - CSS background color: https://www.w3schools.com/css/css_background_color.asp
     - CSS fonts: https://www.w3schools.com/css/css_font.asp
+    - CSS borders: https://www.w3schools.com/css/css_border.asp
+    - CSS margin: https://www.w3schools.com/css/css_margin.asp
+    - CSS padding: https://www.w3schools.com/css/css_padding.asp
+    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - HTML blocks: https://www.w3schools.com/html/html_blocks.asp
     - Images sourced from Wikimedia Commons under free license
 	-->
 	<title>The Goat's Post</title>
@@ -22,13 +28,18 @@
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* body background color and font-family - Source: https://www.w3schools.com/css/css_background_color.asp and https://www.w3schools.com/css/css_font.asp */
+        /* background-color and font-family
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_font.asp */
         body {
             background-color: #F5F0E8;
             font-family: Georgia, serif;
         }
 
-        /* masthead background-color, color, text-align, padding, font-size - Source: https://www.w3schools.com/css/ */
+        /* background-color, color, text-align, padding, font-size
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_font.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
         .masthead {
             background-color: #000000;
             color: #F5F0E8;
@@ -37,13 +48,17 @@
             font-size: 60px;
         }
 
-        /* gold divider using background-color and height - Source: https://www.w3schools.com/css/css_background_color.asp */
+        /* background-color and height for gold divider
+           Source: https://www.w3schools.com/css/css_background_color.asp */
         .gold-line {
             background-color: #C8A84B;
             height: 5px;
         }
 
-        /* dateline text-align, font-size, padding, border - Source: https://www.w3schools.com/css/css_border.asp */
+        /* text-align, font-size, padding, border, margin
+           Source: https://www.w3schools.com/css/css_border.asp
+           Source: https://www.w3schools.com/css/css_margin.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
         .dateline {
             text-align: center;
             font-size: 14px;
@@ -53,24 +68,31 @@
             margin-bottom: 10px;
         }
 
-        /* h2 font-size and font-weight - Source: https://www.w3schools.com/css/css_font.asp */
+        /* font-size and font-weight
+           Source: https://www.w3schools.com/css/css_font.asp */
         h2 {
             font-size: 20px;
             font-weight: bold;
         }
 
-        /* img width 100% to fill column - Source: https://www.w3schools.com/html/html_images.asp */
+        /* img width to fill column
+           Source: https://www.w3schools.com/html/html_images.asp */
         img {
             width: 100%;
         }
 
-        /* story padding and border-right - Source: https://www.w3schools.com/css/css_border.asp */
+        /* padding and border-right
+           Source: https://www.w3schools.com/css/css_padding.asp
+           Source: https://www.w3schools.com/css/css_border.asp */
         .story {
             padding: 15px;
             border-right: 1px solid #CCCCCC;
         }
 
-        /* bottom-row border-top, margin-top, padding-top - Source: https://www.w3schools.com/css/css_border.asp */
+        /* border-top, margin-top, padding-top
+           Source: https://www.w3schools.com/css/css_border.asp
+           Source: https://www.w3schools.com/css/css_margin.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
         .bottom-row {
             border-top: 2px solid #000000;
             margin-top: 10px;
@@ -80,24 +102,29 @@
 </head>
 <body>
 
-	<!-- masthead div - Source: https://www.w3schools.com/html/html_blocks.asp -->
+	<!-- div blocks - Source: https://www.w3schools.com/html/html_blocks.asp -->
 	<div class="masthead">The Goat's Post</div>
     <div class="gold-line"></div>
     <div class="dateline">Monday, April 27, 2026 | All LeBron, All the Time</div>
 
-    <!-- Bootstrap container and row - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+    <!-- Bootstrap container, row, mt-4 spacing utility
+         Source: https://getbootstrap.com/docs/5.3/layout/grid/
+         Source: https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
     <div class="container mt-4">
         <div class="row">
 
-            <!-- col-8 for main featured story - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+            <!-- col-8 for main featured story
+                 Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
             <div class="col-8 story">
-                <!-- img tag with src and alt - Source: https://www.w3schools.com/html/html_images.asp -->
+                <!-- img tag with src and alt
+                     Source: https://www.w3schools.com/html/html_images.asp -->
                 <img src="Lebron2.jpg" alt="LeBron James playing basketball for the Lakers">
                 <h2>LeBron Goes Up 3-0 vs the Rockets</h2>
                 <p>In a dominant performance, James led his team to a big series lead, hitting a buzzer beater to head into OT.</p>
             </div>
 
-            <!-- col-4 for two smaller side stories - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+            <!-- col-4 for two smaller side stories
+                 Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
             <div class="col-4">
                 <div class="story">
                     <img src="LeBron1.jpg" alt="LeBron James with the Cleveland Cavaliers">
@@ -113,7 +140,8 @@
 
         </div>
 
-        <!-- bottom row using Bootstrap col-4 grid - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+        <!-- bottom row three equal col-4 columns
+             Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
         <div class="row bottom-row">
             <div class="col-4 story">
                 <h2>LeBron Named Greatest Athlete of All Time by Sports Illustrated</h2>
@@ -131,7 +159,8 @@
 
     </div>
 
-    <!-- Bootstrap JS bundle - Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    <!-- Bootstrap JS bundle
+         Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
