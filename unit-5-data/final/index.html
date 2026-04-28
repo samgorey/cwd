@@ -1,1 +1,163 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    statement:
+    This page tells a story about Instagram use and situationships among college students.
+    I chose a dark background to give it a modern, editorial feel similar to data journalism
+    sites like The Pudding. Bootstrap provides the responsive layout.
+
+ Tools I used:
+    - Claude (claude.ai) was used to help write and debug the Bootstrap code.
+    - Prompt used: "Build a simple Bootstrap data story page with 3 Flourish chart embeds"
+    - Flourish Studio was used to create all three data visualizations: https://flourish.studio/
+    - All article text was written by the author.
+
+    OTHER SOURCES:
+    - Bootstrap 5: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - Bootstrap grid: https://getbootstrap.com/docs/5.3/layout/grid/
+    - Bootstrap spacing utilities: https://getbootstrap.com/docs/5.3/utilities/spacing/
+    - CSS background color: https://www.w3schools.com/css/css_background_color.asp
+    - CSS fonts: https://www.w3schools.com/css/css_font.asp
+    - CSS padding: https://www.w3schools.com/css/css_padding.asp
+    - CSS borders: https://www.w3schools.com/css/css_border.asp
+    - CSS margin: https://www.w3schools.com/css/css_margin.asp
+    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - HTML blocks: https://www.w3schools.com/html/html_blocks.asp
+    - Flourish embed documentation: https://help.flourish.studio/article/13-how-to-embed-a-visualisation
+    -->
+    <title>Swipe Right on Ambiguity</title>
+
+    <!-- Bootstrap 5 CDN - Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* background-color and font-family
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_font.asp */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Georgia, serif;
+        }
+
+        /* font-size, font-weight, text-align, padding
+           Source: https://www.w3schools.com/css/css_font.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+
+        /* font-size, font-weight, padding-top
+           Source: https://www.w3schools.com/css/css_font.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 30px;
+        }
+
+        /* font-size, line-height
+           Source: https://www.w3schools.com/css/css_font.asp */
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* padding on chart container
+           Source: https://www.w3schools.com/css/css_padding.asp */
+        .chart-container {
+            padding: 20px 0;
+        }
+
+        /* border-top, margin
+           Source: https://www.w3schools.com/css/css_border.asp
+           Source: https://www.w3schools.com/css/css_margin.asp */
+        .divider {
+            border-top: 1px solid #333333;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bootstrap container and responsive grid
+         Source: https://getbootstrap.com/docs/5.3/layout/grid/
+         Source: https://getbootstrap.com/docs/5.3/layout/containers/ -->
+    <div class="container">
+
+        <!-- justify-content-center centers the column
+             Source: https://getbootstrap.com/docs/5.3/utilities/flex/ -->
+        <div class="row justify-content-center">
+
+            <!-- col-lg-8 limits width on large screens for readability
+                 Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+            <div class="col-lg-8">
+
+                <!-- h1 heading - Source: https://www.w3schools.com/html/html_headings.asp -->
+                <h1>Swipe Right on Ambiguity: Instagram and Situationships</h1>
+
+                <!-- paragraph text - Source: https://www.w3schools.com/html/html_paragraphs.asp -->
+                <p>Write your intro paragraph here.</p>
+
+                <!-- horizontal divider - Source: https://www.w3schools.com/css/css_border.asp -->
+                <div class="divider"></div>
+
+                <!-- h2 section heading - Source: https://www.w3schools.com/html/html_headings.asp -->
+                <h2>Have you ever been in a situationship?</h2>
+                <p>Write your description of chart 1 here.</p>
+
+                <!-- Flourish Chart 1 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
+                <div class="chart-container">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/28734539">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                        <!-- noscript fallback image - Source: https://www.w3schools.com/html/html_images.asp -->
+                        <noscript><img src="https://public.flourish.studio/visualisation/28734539/thumbnail" width="100%" alt="Pie chart showing situationship experience among survey respondents" /></noscript>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h2>How much time do students spend on Instagram?</h2>
+                <p>chart description</p>
+
+                <!-- Flourish Chart 2 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
+                <div class="chart-container">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/28734588">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                        <noscript><img src="https://public.flourish.studio/visualisation/28734588/thumbnail" width="100%" alt="Bar chart showing daily Instagram usage hours among survey respondents" /></noscript>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <h2>Does Instagram make it easier to avoid defining a relationship?</h2>
+                <p>chart description</p>
+
+                <!-- Flourish Chart 3 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
+                <div class="chart-container">
+                    <div class="flourish-embed flourish-chart" data-src="visualisation/28734614">
+                        <script src="https://public.flourish.studio/resources/embed.js"></script>
+                        <noscript><img src="https://public.flourish.studio/visualisation/28734614/thumbnail" width="100%" alt="Donut chart showing responses to whether Instagram makes it easier to avoid defining a relationship" /></noscript>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- closing paragraph - Source: https://www.w3schools.com/html/html_paragraphs.asp -->
+                <p>closing paragraph here.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS bundle - Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
