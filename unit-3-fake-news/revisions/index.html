@@ -3,18 +3,111 @@
 <head>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<!-- 
-	About this page:
-
-
+	The Goat's Post is a fake newspaper dedicated to LeBron James and his basketball
+	career. The site is entirely created to celebrate LeBron, "The Goat". Bootstrap
+	gives the paper a cool column layout, while the black and cream give it a traditional
+	feel.
+	My Process:
+    - Bootstrap 5 grid system: https://getbootstrap.com/docs/5.3/layout/grid/
+    - Bootstrap 5 getting started: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - CSS styling: https://www.w3schools.com/css/
+    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - CSS fonts: https://www.w3schools.com/css/css_font.asp
+    - Images sourced from Wikimedia Commons under free license
 	-->
-	<title>Fake News</title>
-	
+	<title>The Goat's Post</title>
   	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #F5F0E8;
+            font-family: Georgia, serif;
+        }
+        .masthead {
+            background-color: #000000;
+            color: #F5F0E8;
+            text-align: center;
+            padding: 20px;
+            font-size: 60px;
+        }
+        .gold-line {
+            background-color: #C8A84B;
+            height: 5px;
+        }
+        .dateline {
+            text-align: center;
+            font-size: 14px;
+            padding: 8px;
+            border-bottom: 1px solid #000000;
+            border-top: 1px solid #000000;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        img {
+            width: 100%;
+        }
+        .story {
+            padding: 15px;
+            border-right: 1px solid #CCCCCC;
+        }
+        .bottom-row {
+            border-top: 2px solid #000000;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
-	<h1>Hello, world!</h1>
+	<div class="masthead">The Goat's Post</div>
+    <div class="gold-line"></div>
+    <div class="dateline">Monday, April 27, 2026 | All LeBron, All the Time</div>
+    <!-- Bootstrap grid - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+    <div class="container mt-4">
+        <div class="row">
+
+            <!-- Main featured story -->
+            <div class="col-8 story">
+                <img src="LeBron1.jpg" alt="LeBron James playing basketball for the Lakers">
+                <h2>LeBron Goes Up 3-0 vs the Rockets</h2>
+                <p>In a dominant performance, James led his team to a big series lead, hitting a buzzer beater to head into OT.</p>
+            </div>
+
+            <!-- Two smaller side stories -->
+            <div class="col-4">
+                <div class="story">
+                    <img src="LeBronCavs.jpg" alt="LeBron James with the Cleveland Cavaliers">
+                    <h2>LeBron Throws Alley Oop to His Son in Historic Moment</h2>
+                    <p>LeBron and Bronny connected for an alley oop, making history as the first father-son duo to play together in the NBA.</p>
+                </div>
+                <div class="story">
+                    <img src="Lebron2.jpg" alt="LeBron James smiling">
+                    <h2>Cleveland Rumored to Add LeBron This Summer</h2>
+                    <p>Sources close to the King say a return to Cleveland is on the table, and fans in Ohio are already celebrating in the streets.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom row: three equal stories -->
+        <div class="row bottom-row">
+            <div class="col-4 story">
+                <h2>LeBron Named Greatest Athlete of All Time by Sports Illustrated</h2>
+                <p>In a landmark cover story, Sports Illustrated declared LeBron James the greatest athlete across all sports in the history of American competition.</p>
+            </div>
+            <div class="col-4 story">
+                <h2>King James Opens 100th Free School in Akron</h2>
+                <p>LeBron's I Promise School network reached a major milestone this week, opening its 100th location and providing free education to thousands of at-risk students.</p>
+            </div>
+            <div class="col-4 story">
+                <h2>LeBron Wins Father of the Year Award for Third Consecutive Year</h2>
+                <p>Citing his dedication to his family and his public role as a positive father figure, LeBron James was awarded Father of the Year for a record third time in a row.</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
