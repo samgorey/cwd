@@ -1,27 +1,36 @@
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--
-    statment:
+    STATEMENT:
     This usability report documents a test on olivegarden.com with 2 participants.
     I used a clean white Bootstrap layout to make task data easy to read.
-    The SUS calculator lets readers input their own values and get a score
+    The SUS calculator lets readers input their own values and get a score.
 
-    sources:
+    AI TOOLS USED:
+    - Claude (claude.ai) helped write and debug the HTML, CSS, Bootstrap, and JavaScript.
+    - Prompt: "Build a Bootstrap usability report page with task sections and a SUS calculator"
+    - All written descriptions were written by the author.
+
+    SOURCES:
     - Bootstrap 5: https://getbootstrap.com/docs/5.3/getting-started/introduction/
     - Bootstrap grid: https://getbootstrap.com/docs/5.3/layout/grid/
     - Bootstrap forms: https://getbootstrap.com/docs/5.3/forms/overview/
+    - Bootstrap form select: https://getbootstrap.com/docs/5.3/forms/select/
     - Bootstrap buttons: https://getbootstrap.com/docs/5.3/components/buttons/
-    - Bootstrap badges: https://getbootstrap.com/docs/5.3/components/badge/
     - Bootstrap containers: https://getbootstrap.com/docs/5.3/layout/containers/
-    - Bootstrap spacing: https://getbootstrap.com/docs/5.3/utilities/spacing/
-    - CSS background: https://www.w3schools.com/css/css_background_color.asp
+    - Bootstrap spacing utilities: https://getbootstrap.com/docs/5.3/utilities/spacing/
+    - Bootstrap flex utilities: https://getbootstrap.com/docs/5.3/utilities/flex/
+    - Bootstrap text utilities: https://getbootstrap.com/docs/5.3/utilities/text/
+    - CSS background color: https://www.w3schools.com/css/css_background_color.asp
     - CSS fonts: https://www.w3schools.com/css/css_font.asp
     - CSS borders: https://www.w3schools.com/css/css_border.asp
+    - CSS border radius: https://www.w3schools.com/css/css3_borders.asp
     - CSS padding: https://www.w3schools.com/css/css_padding.asp
+    - CSS margin: https://www.w3schools.com/css/css_margin.asp
+    - CSS colors: https://www.w3schools.com/css/css_colors.asp
     - HTML images: https://www.w3schools.com/html/html_images.asp
     - HTML blocks: https://www.w3schools.com/html/html_blocks.asp
     - JavaScript events: https://criticalwebdesign.github.io/wiki/chapter-03/3-3-javascript-events/
@@ -33,22 +42,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* body - Source: https://www.w3schools.com/css/css_background_color.asp https://www.w3schools.com/css/css_font.asp */
+        /* background-color, font-family
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_font.asp */
         body { background-color: #f8f9fa; font-family: Georgia, serif; }
 
-        /* header - Source: https://www.w3schools.com/css/css_background_color.asp https://www.w3schools.com/css/css_padding.asp */
+        /* background-color, color, text-align, padding
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_colors.asp
+           Source: https://www.w3schools.com/css/css_padding.asp */
         .header { background-color: #4a7c59; color: #ffffff; text-align: center; padding: 40px 0; }
 
-        /* task and sus sections - Source: https://www.w3schools.com/css/css_border.asp https://www.w3schools.com/css/css_padding.asp */
+        /* background-color, border, border-radius, padding, margin-bottom
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_border.asp
+           Source: https://www.w3schools.com/css/css3_borders.asp
+           Source: https://www.w3schools.com/css/css_padding.asp
+           Source: https://www.w3schools.com/css/css_margin.asp */
         .task-section, .sus-section { background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 8px; padding: 20px; margin-bottom: 24px; }
 
-        /* image - Source: https://www.w3schools.com/html/html_images.asp */
+        /* width, border
+           Source: https://www.w3schools.com/html/html_images.asp
+           Source: https://www.w3schools.com/css/css_border.asp */
         .task-img { width: 100%; border: 1px solid #dee2e6; }
 
-        /* time badge - Source: https://www.w3schools.com/css/css_padding.asp */
+        /* background-color, color, padding, border-radius, font-size, margin-right
+           Source: https://www.w3schools.com/css/css_background_color.asp
+           Source: https://www.w3schools.com/css/css_colors.asp
+           Source: https://www.w3schools.com/css/css_padding.asp
+           Source: https://www.w3schools.com/css/css3_borders.asp
+           Source: https://www.w3schools.com/css/css_font.asp
+           Source: https://www.w3schools.com/css/css_margin.asp */
         .time-badge { background-color: #4a7c59; color: white; padding: 4px 10px; border-radius: 4px; font-size: 14px; margin-right: 8px; }
 
-        /* SUS score display - Source: https://www.w3schools.com/css/css_font.asp */
+        /* font-size, font-weight, color, text-align
+           Source: https://www.w3schools.com/css/css_font.asp
+           Source: https://www.w3schools.com/css/css_colors.asp */
         .sus-result { font-size: 48px; font-weight: bold; color: #4a7c59; text-align: center; }
     </style>
 </head>
@@ -60,10 +89,14 @@
         <p>A usability test conducted on olivegarden.com with 2 participants</p>
     </div>
 
-    <!-- Bootstrap container - Source: https://getbootstrap.com/docs/5.3/layout/containers/ -->
+    <!-- Bootstrap container, mt-4 spacing utility
+         Source: https://getbootstrap.com/docs/5.3/layout/containers/
+         Source: https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
     <div class="container mt-4">
 
-        <!-- Task 1 - Bootstrap grid - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+        <!-- Task 1 - Bootstrap grid row, align-items-center flex utility, col-md-6
+             Source: https://getbootstrap.com/docs/5.3/layout/grid/
+             Source: https://getbootstrap.com/docs/5.3/utilities/flex/ -->
         <div class="task-section">
             <h2>Task 1: Find the Nearest Location</h2>
             <div class="row align-items-center">
@@ -73,7 +106,7 @@
                 </div>
                 <div class="col-md-6">
                     <p><span class="time-badge">User 1: 5 sec</span><span class="time-badge">User 2: 11 sec</span></p>
-                    <p>Write description here.</p>
+                    <p>Both users found the Find Restaurant button quickly with no struggles.</p>
                 </div>
             </div>
         </div>
@@ -87,7 +120,7 @@
                 </div>
                 <div class="col-md-6">
                     <p><span class="time-badge">User 1: 8 sec</span><span class="time-badge">User 2: 15 sec</span></p>
-                    <p>Write description here.</p>
+                    <p>Both users had to find a location first before the waitlist option appeared.</p>
                 </div>
             </div>
         </div>
@@ -101,7 +134,7 @@
                 </div>
                 <div class="col-md-6">
                     <p><span class="time-badge">User 1: 12 sec</span><span class="time-badge">User 2: 20 sec</span></p>
-                    <p>Write description here.</p>
+                    <p>Both users navigated to the menu and found the Tour of Italy price of $22.49.</p>
                 </div>
             </div>
         </div>
@@ -115,7 +148,7 @@
                 </div>
                 <div class="col-md-6">
                     <p><span class="time-badge">User 1: 20 sec</span><span class="time-badge">User 2: 27 sec</span></p>
-                    <p>Write description here.</p>
+                    <p>The hardest task for both users. Finding nutrition info required clicking into the item and locating a separate link.</p>
                 </div>
             </div>
         </div>
@@ -129,7 +162,7 @@
                 </div>
                 <div class="col-md-6">
                     <p><span class="time-badge">User 1: 13 sec</span><span class="time-badge">User 2: 19 sec</span></p>
-                    <p>Write description here.</p>
+                    <p>Both users had to scroll to the bottom of the homepage to find the signup form.</p>
                 </div>
             </div>
         </div>
@@ -157,10 +190,14 @@
                 </div>
             </div>
 
-            <!-- Bootstrap button - Source: https://getbootstrap.com/docs/5.3/components/buttons/ -->
+            <!-- Bootstrap button, text-center utility
+                 Source: https://getbootstrap.com/docs/5.3/components/buttons/
+                 Source: https://getbootstrap.com/docs/5.3/utilities/text/ -->
             <div class="text-center">
                 <button class="btn btn-success btn-lg" id="calcBtn">Calculate SUS Score</button>
             </div>
+
+            <!-- mt-4 spacing utility - Source: https://getbootstrap.com/docs/5.3/utilities/spacing/ -->
             <div class="sus-result mt-4" id="susResult"></div>
             <p class="text-center" id="susLabel"></p>
         </div>
