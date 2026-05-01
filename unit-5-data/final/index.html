@@ -9,7 +9,7 @@
     I chose a dark background to give it a modern, editorial feel similar to data journalism
     sites like The Pudding. Bootstrap provides the responsive layout.
 
- Tools I used:
+    Tools I used:
     - Claude (claude.ai) was used to help write and debug the Bootstrap code.
     - Prompt used: "Build a simple Bootstrap data story page with 3 Flourish chart embeds"
     - Flourish Studio was used to create all three data visualizations: https://flourish.studio/
@@ -82,6 +82,11 @@
             border-top: 1px solid #333333;
             margin: 40px 0;
         }
+
+        /* image sizing - Source: https://www.w3schools.com/html/html_images.asp */
+        .side-image {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +115,7 @@
 
                 <!-- h2 section heading - Source: https://www.w3schools.com/html/html_headings.asp -->
                 <h2>Have you ever been in a situationship?</h2>
-                <p>chart 1.</p>
+                <p>chart 1 description.</p>
 
                 <!-- Flourish Chart 1 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
                 <div class="chart-container">
@@ -124,7 +129,7 @@
                 <div class="divider"></div>
 
                 <h2>How much time do students spend on Instagram?</h2>
-                <p>chart description</p>
+                <p>chart 2 description.</p>
 
                 <!-- Flourish Chart 2 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
                 <div class="chart-container">
@@ -137,7 +142,7 @@
                 <div class="divider"></div>
 
                 <h2>Does Instagram make it easier to avoid defining a relationship?</h2>
-                <p>chart description</p>
+                <p>chart 3 description.</p>
 
                 <!-- Flourish Chart 3 embed - Source: https://help.flourish.studio/article/13-how-to-embed-a-visualisation -->
                 <div class="chart-container">
@@ -149,8 +154,18 @@
 
                 <div class="divider"></div>
 
-                <!-- closing paragraph - Source: https://www.w3schools.com/html/html_paragraphs.asp -->
-                <p>closing paragraph here.</p>
+                <!-- image and text side by side using Bootstrap grid
+                     Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+                <div class="row align-items-center">
+                    <!-- image on left - Source: https://www.w3schools.com/html/html_images.asp -->
+                    <div class="col-md-6">
+                        <img src="situationships.webp" alt="Illustration related to situationships and social media" class="side-image">
+                    </div>
+                    <!-- text on right - Source: https://www.w3schools.com/html/html_paragraphs.asp -->
+                    <div class="col-md-6">
+                        <p>closing paragraph here.</p>
+                    </div>
+                </div>
 
             </div>
         </div>
