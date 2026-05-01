@@ -1,1 +1,196 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    statment:
+    This usability report documents a test on olivegarden.com with 2 participants.
+    I used a clean white Bootstrap layout to make task data easy to read.
+    The SUS calculator lets readers input their own values and get a score
+
+    sources:
+    - Bootstrap 5: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+    - Bootstrap grid: https://getbootstrap.com/docs/5.3/layout/grid/
+    - Bootstrap forms: https://getbootstrap.com/docs/5.3/forms/overview/
+    - Bootstrap buttons: https://getbootstrap.com/docs/5.3/components/buttons/
+    - Bootstrap badges: https://getbootstrap.com/docs/5.3/components/badge/
+    - Bootstrap containers: https://getbootstrap.com/docs/5.3/layout/containers/
+    - Bootstrap spacing: https://getbootstrap.com/docs/5.3/utilities/spacing/
+    - CSS background: https://www.w3schools.com/css/css_background_color.asp
+    - CSS fonts: https://www.w3schools.com/css/css_font.asp
+    - CSS borders: https://www.w3schools.com/css/css_border.asp
+    - CSS padding: https://www.w3schools.com/css/css_padding.asp
+    - HTML images: https://www.w3schools.com/html/html_images.asp
+    - HTML blocks: https://www.w3schools.com/html/html_blocks.asp
+    - JavaScript events: https://criticalwebdesign.github.io/wiki/chapter-03/3-3-javascript-events/
+    - SUS calculation: https://measuringu.com/sus/
+    -->
+    <title>Olive Garden Usability Report</title>
+
+    <!-- Bootstrap 5 - Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* body - Source: https://www.w3schools.com/css/css_background_color.asp https://www.w3schools.com/css/css_font.asp */
+        body { background-color: #f8f9fa; font-family: Georgia, serif; }
+
+        /* header - Source: https://www.w3schools.com/css/css_background_color.asp https://www.w3schools.com/css/css_padding.asp */
+        .header { background-color: #4a7c59; color: #ffffff; text-align: center; padding: 40px 0; }
+
+        /* task and sus sections - Source: https://www.w3schools.com/css/css_border.asp https://www.w3schools.com/css/css_padding.asp */
+        .task-section, .sus-section { background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+
+        /* image - Source: https://www.w3schools.com/html/html_images.asp */
+        .task-img { width: 100%; border: 1px solid #dee2e6; }
+
+        /* time badge - Source: https://www.w3schools.com/css/css_padding.asp */
+        .time-badge { background-color: #4a7c59; color: white; padding: 4px 10px; border-radius: 4px; font-size: 14px; margin-right: 8px; }
+
+        /* SUS score display - Source: https://www.w3schools.com/css/css_font.asp */
+        .sus-result { font-size: 48px; font-weight: bold; color: #4a7c59; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- header div - Source: https://www.w3schools.com/html/html_blocks.asp -->
+    <div class="header">
+        <h1>Olive Garden Usability Report</h1>
+        <p>A usability test conducted on olivegarden.com with 2 participants</p>
+    </div>
+
+    <!-- Bootstrap container - Source: https://getbootstrap.com/docs/5.3/layout/containers/ -->
+    <div class="container mt-4">
+
+        <!-- Task 1 - Bootstrap grid - Source: https://getbootstrap.com/docs/5.3/layout/grid/ -->
+        <div class="task-section">
+            <h2>Task 1: Find the Nearest Location</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <!-- img with alt - Source: https://www.w3schools.com/html/html_images.asp -->
+                    <img src="Screenshot 2026-05-01 at 3.21.15 PM.png" alt="Olive Garden restaurant finder page showing a map" class="task-img">
+                </div>
+                <div class="col-md-6">
+                    <p><span class="time-badge">User 1: 5 sec</span><span class="time-badge">User 2: 11 sec</span></p>
+                    <p>Write description here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 2 -->
+        <div class="task-section">
+            <h2>Task 2: Join the Waitlist</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Screenshot 2026-05-01 at 3.22.19 PM.png" alt="Olive Garden location results showing join waitlist button" class="task-img">
+                </div>
+                <div class="col-md-6">
+                    <p><span class="time-badge">User 1: 8 sec</span><span class="time-badge">User 2: 15 sec</span></p>
+                    <p>Write description here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 3 -->
+        <div class="task-section">
+            <h2>Task 3: Find the Tour of Italy Price</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Screenshot 2026-05-01 at 3.23.33 PM.png" alt="Olive Garden menu showing Tour of Italy at $22.49" class="task-img">
+                </div>
+                <div class="col-md-6">
+                    <p><span class="time-badge">User 1: 12 sec</span><span class="time-badge">User 2: 20 sec</span></p>
+                    <p>Write description here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 4 -->
+        <div class="task-section">
+            <h2>Task 4: Find Fettuccine Alfredo Nutrition Info</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Screenshot 2026-05-01 at 3.24.21 PM.png" alt="Olive Garden nutritional info popup for Fettuccine Alfredo" class="task-img">
+                </div>
+                <div class="col-md-6">
+                    <p><span class="time-badge">User 1: 20 sec</span><span class="time-badge">User 2: 27 sec</span></p>
+                    <p>Write description here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task 5 -->
+        <div class="task-section">
+            <h2>Task 5: Sign Up for the Email List</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Screenshot 2026-05-01 at 3.25.21 PM.png" alt="Olive Garden homepage showing eClub email signup form" class="task-img">
+                </div>
+                <div class="col-md-6">
+                    <p><span class="time-badge">User 1: 13 sec</span><span class="time-badge">User 2: 19 sec</span></p>
+                    <p>Write description here.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUS Calculator -->
+        <div class="sus-section">
+            <h2>SUS Calculator</h2>
+            <p>Enter scores from 1-5 for each question to calculate a System Usability Scale score. Source: <a href="https://measuringu.com/sus/">measuringu.com/sus</a></p>
+
+            <!-- Bootstrap form selects - Source: https://getbootstrap.com/docs/5.3/forms/select/ -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3"><label class="form-label">Q1: I would like to use this website frequently</label><select class="form-select" id="q1"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q2: I found the website unnecessarily complex</label><select class="form-select" id="q2"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q3: The website was easy to use</label><select class="form-select" id="q3"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q4: I would need support to use this website</label><select class="form-select" id="q4"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q5: The functions were well integrated</label><select class="form-select" id="q5"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3"><label class="form-label">Q6: There was too much inconsistency</label><select class="form-select" id="q6"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q7: Most people would learn this quickly</label><select class="form-select" id="q7"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q8: It was very awkward to use</label><select class="form-select" id="q8"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q9: I felt confident using it</label><select class="form-select" id="q9"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                    <div class="mb-3"><label class="form-label">Q10: I needed to learn a lot before using it</label><select class="form-select" id="q10"><option value="1">1 - Strongly Disagree</option><option value="2">2</option><option value="3" selected>3</option><option value="4">4</option><option value="5">5 - Strongly Agree</option></select></div>
+                </div>
+            </div>
+
+            <!-- Bootstrap button - Source: https://getbootstrap.com/docs/5.3/components/buttons/ -->
+            <div class="text-center">
+                <button class="btn btn-success btn-lg" id="calcBtn">Calculate SUS Score</button>
+            </div>
+            <div class="sus-result mt-4" id="susResult"></div>
+            <p class="text-center" id="susLabel"></p>
+        </div>
+
+    </div>
+
+    <!-- JavaScript SUS calculator
+         Source: https://measuringu.com/sus/
+         Source: https://criticalwebdesign.github.io/wiki/chapter-03/3-3-javascript-events/ -->
+    <script>
+        let calcBtn = document.querySelector("#calcBtn");
+        calcBtn.addEventListener("click", function() {
+            let q1 = parseInt(document.querySelector("#q1").value);
+            let q2 = parseInt(document.querySelector("#q2").value);
+            let q3 = parseInt(document.querySelector("#q3").value);
+            let q4 = parseInt(document.querySelector("#q4").value);
+            let q5 = parseInt(document.querySelector("#q5").value);
+            let q6 = parseInt(document.querySelector("#q6").value);
+            let q7 = parseInt(document.querySelector("#q7").value);
+            let q8 = parseInt(document.querySelector("#q8").value);
+            let q9 = parseInt(document.querySelector("#q9").value);
+            let q10 = parseInt(document.querySelector("#q10").value);
+            let score = ((q1-1)+(5-q2)+(q3-1)+(5-q4)+(q5-1)+(5-q6)+(q7-1)+(5-q8)+(q9-1)+(5-q10)) * 2.5;
+            document.querySelector("#susResult").textContent = score + " / 100";
+            let label = score >= 85 ? "Excellent" : score >= 70 ? "Good" : score >= 50 ? "OK" : "Poor";
+            document.querySelector("#susLabel").textContent = "Rating: " + label;
+        });
+    </script>
+
+    <!-- Bootstrap JS - Source: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
